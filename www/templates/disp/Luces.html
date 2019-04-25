@@ -1,0 +1,97 @@
+<ion-view>
+    <ion-nav-title>
+        <center>
+        <div><button class="button icon ion-ios-home-outline" on-tap="go('/prueba')"></button></div>
+      </center>
+     </ion-nav-title>
+  <ion-content padding="true">
+    
+      
+
+    <div class="item item-divider">
+      <center><span style="color:#11c1f3">Intensidad</span></center>
+    </div>
+  <div class="range range-calm">
+      <i class="ion-ios-lightbulb-outline"></i>
+      Rojo : {{rangeValueR}}
+      <input type="range" name="valorR" min="0" max="1023" value= "0" ng-model="rangeValueR"; ng-change="sendMessage('x' + rangeValueR)"; >
+      <i class="ion-ios-lightbulb"></i>
+    </div>
+    <div class="range">
+      <i class="ion-ios-lightbulb-outline"></i>
+      Verde:{{rangeValueG}}
+      <input type="range" name="valorG" min="0" max="1023" value="0" ng-model="rangeValueG"; ng-change="sendMessage('y' + rangeValueG)";>
+      <i class="ion-ios-lightbulb"></i>
+    </div>
+    <div class="range">
+      <i class="ion-ios-lightbulb-outline"></i>
+      Azul : {{rangeValueB}}
+      <input type="range" name="valorB" min="0" max="1023" value="0" ng-model="rangeValueB"; ng-change="sendMessage('z' + rangeValueB)";>
+      <i class="ion-ios-lightbulb"></i>
+    </div>
+      
+          
+
+          <div class="item item-divider">
+            <center><span style="color:#11c1f3">Colores</span></center>
+          </div>
+
+          <div class="row">
+            <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('ROJO')" class="checkbox-assertive"></ion-checkbox></center></div>
+            <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('AZUL')" class="checkbox-positive"></ion-checkbox></center></div>
+            <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('VERDE')" class="checkbox-balanced"></ion-checkbox></center></div>
+          </div>
+          <div class="row">
+              <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('CIAN')" class="checkbox-calm"></ion-checkbox></center></div>
+              <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('VIOLETA')" class="checkbox-royal"></ion-checkbox></center></div>
+              <div class="col col-33"><center><ion-checkbox ng-click="sendMessage('AMARILLO')" class="checkbox-energized"></ion-checkbox></center></div>
+            </div>
+          
+
+
+            <div class="item item-divider">
+              <center><span style="color:#11c1f3">Fiesta</span></center>
+            </div>
+            <li>
+              <div class="row">
+                <div class="col col-40">
+                  <button ng-click="sendMessage('LED')" class="button button-small button-calm">
+                   Parpadear
+                  </button>
+                </div>
+                <div class="col col-40">
+                <button ng-click="sendMessage('RESET')" class="button button-small button-calm">
+                   Resetear
+                  </button>
+                </div>
+                <div class="col col-33">
+                <button ng-click="sendMessage('RAINBOW')" class="button button-small button-calm">
+                    ¡Arcoiris!
+                  </button>
+                </div>
+              </div>
+            
+        
+            <div class="range">
+                <i class="ion-ios-lightbulb-outline">  </i>
+                    Velocidad arcoiris:{{rangeValueRain}}
+                    <input type="range" name="valorRain" min="0" max="1023" value="0" ng-model="rangeValueRain"; ng-change="sendMessage('t' + rangeValueRain)";>
+            </input>
+                <i class="ion-ios-lightbulb"></i>
+            </div>
+          </li>
+
+            
+            
+          
+            
+          
+          
+           
+
+
+         
+  
+                    
+  </ion-content>
+</ion-view>

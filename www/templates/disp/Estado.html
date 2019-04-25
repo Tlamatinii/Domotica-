@@ -1,0 +1,130 @@
+<ion-view>
+        <ion-nav-title>
+          <center>
+            <div><button class="button icon ion-ios-home-outline" on-tap="go('/prueba')"></button></div>
+          </center>
+             </ion-nav-title>
+        
+  <ion-content padding="true">
+    
+
+
+
+    <div class="item item-divider">
+      <center><span style="color:#11c1f3">Luces</span></center>
+    </div>
+    <div class="row">
+        <div class="col col-50"><center><h5>Cocina</h5></center></div>
+        <div class="col col-50"><center><h5>Garage</h5></center></div>
+      </div>
+    <div class="row"> 
+        <div class="col col-50">
+          <center><label class="toggle toggle-calm">
+            <input type="checkbox" button ng-click="sendMessage('LCOCINA')">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+         </label></center>
+        </div>
+        <div class="col col-50">
+          <center><label class="toggle toggle-calm">
+            <input type="checkbox" button ng-click="sendMessage('LGARAJE')">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+         </label></center>
+        </div>
+    </div>
+      
+    <div class="row">
+          <div class="col col-50"><center><h5>Dormitorio</h5></center></div>
+          <div class="col col-50"><center><h5>Baño</h5></center></div>
+      </div>
+      <div class="row"> 
+          <div class="col col-50">
+            <center><label class="toggle toggle-calm">
+              <input type="checkbox" button ng-click="sendMessage('DORMITORIO')">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+           </label></center></div>
+          <div class="col col-50"><center><label class="toggle toggle-calm">
+              <input type="checkbox" button ng-click="sendMessage('BAÑO')">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+           </label></center></div>
+      </div>
+      <div class="item item-divider">
+        <center><span style="color:#11c1f3">Puertas y Ventanas</span></center>
+      </div>
+      <div class="row">
+        <div class="col col-50"><center><h5>Porton</h5></center></div>
+        <div class="col col-50"><center><h5>Puerta</h5></center></div>
+      </div>
+    <div class="row"> 
+        <div class="col col-50">
+          <center><label class="toggle toggle-calm">
+            <input type="checkbox" button ng-click="sendMessage('PORTON')">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+         </label></center>
+        </div>
+        <div class="col col-50">
+          <center><label class="toggle toggle-calm">
+            <input type="checkbox" button ng-click="sendMessage('PUERTA')">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+         </label></center>
+        </div>
+    </div>
+      
+    <div class="row">
+          <div class="col col-50"><center><h5>Ventana Cocina</h5></center></div>
+          <div class="col col-50"><center><h5>Ventana Pieza</h5></center></div>
+      </div>
+      <div class="row"> 
+          <div class="col col-50">
+            <center><label class="toggle toggle-calm">
+              <input type="checkbox" button ng-click="sendMessage('VCOCINA')">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+           </label></center></div>
+          <div class="col col-50"><center><label class="toggle toggle-calm">
+              <input type="checkbox" button ng-click="sendMessage('VPIEZA')">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+           </label></center></div>
+      </div>
+
+      <div class="item item-divider">
+        <center><span style="color:#11c1f3">Informacion</span></center>
+      </div>
+
+      <br>
+        <div>
+                
+                
+                  
+                    <center>Temperatura y Humedad</center> 
+                  <center><span><input id="messageLog" ng-model="messageLog" type="text" placeholder="" disabled='true'></span></center>
+                
+          
+                
+        </div>
+
+                    <div>
+                        <center>
+                            <button button ng-click="sendMessage('CLIMA')" class="button button-small button-calm">
+                              Recibir Datos
+                            </button>
+                        </center>
+                      </div>
+
+  
+  </ion-content>
+</ion-view>

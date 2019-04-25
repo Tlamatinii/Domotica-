@@ -1,0 +1,158 @@
+<ion-view>
+    <ion-nav-title>
+        <button class="button button-icon icon ion-ios-home" on-tap="go('/principal')"></button>
+        <center>
+            <span style="color:#11c1f3">Avanzado</span>
+          </center>
+     </ion-nav-title>
+  <ion-content padding="true">
+
+  <div class="list">
+    <ul class="list">
+      <li class="item item-toggle">
+          <span style="color:#11c1f3">
+          <i class="ion-ios-lightbulb-outline"></i></span>
+          <span style="color:#000000">Luz cocina</span>
+         <label class="toggle toggle-calm">
+           <input type="checkbox" button ng-click="sendMessage('COCINA')" class="button button-small button-energized">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+      
+      
+      <li class="item item-toggle">
+          <span style="color:#11c1f3">
+          <i class="ion-ios-lightbulb-outline"></i></span>
+          <span style="color:#000000">Luz garage</span>
+         <label class="toggle toggle-calm">
+           <input type="checkbox" button ng-click="sendMessage('GARAJE')" class="button button-small button-energized">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+      
+      <li class="item item-toggle">
+          <span style="color:#11c1f3">
+          <i class="ion-ios-lightbulb-outline"></i></span>
+          <span style="color:#000000">Luz dormitorio</span>
+         <label class="toggle toggle-calm">
+           <input type="checkbox" button ng-click="sendMessage('DORMITORIO')" class="button button-small button-energized">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+
+      <li class="item item-toggle">
+          <span style="color:#11c1f3">
+        <i class="ion-ios-lightbulb-outline"></i></span>
+        <span style="color:#000000">Luz baño</span>
+       <label class="toggle toggle-calm">
+         <input type="checkbox" button ng-click="sendMessage('BAÑO')" class="button button-small button-energized">
+         <div class="track">
+           <div class="handle"></div>
+         </div>
+       </label>
+    </li>
+              <div class="range">
+                <i class="ion-ios-lightbulb-outline"></i>
+                Rojo : {{rangeValueR}}
+                <input type="range" name="valorR" min="0" max="1023" value= "0" ng-model="rangeValueR"; ng-change="sendMessage('x' + rangeValueR)"; >
+                <i class="ion-ios-lightbulb"></i>
+              </div>
+              <div class="range">
+                <i class="ion-ios-lightbulb-outline"></i>
+                Verde:{{rangeValueG}}
+                <input type="range" name="valorG" min="0" max="1023" value="0" ng-model="rangeValueG"; ng-change="sendMessage('y' + rangeValueG)";>
+                <i class="ion-ios-lightbulb"></i>
+              </div>
+              <div class="range">
+                <i class="ion-ios-lightbulb-outline"></i>
+                Azul : {{rangeValueB}}
+                <input type="range" name="valorB" min="0" max="1023" value="0" ng-model="rangeValueB"; ng-change="sendMessage('z' + rangeValueB)";>
+                <i class="ion-ios-lightbulb"></i>
+              </div>
+      </div>
+        <li class="item">
+          <div class="row">
+            <div class="col col-40">
+              <button ng-click="sendMessage('ROJO')" class="button button-small button-assertive">
+                -Rojo-
+              </button>
+            </div>
+            <div class="col col-40">
+            <button ng-click="sendMessage('AZUL')" class="button button-small button-positive">
+               Amarillo
+              </button>
+            </div>
+            <div class="col col-40">
+            <button ng-click="sendMessage('VERDE')" class="button button-small button-balanced">
+                -Azul-
+              </button>
+            </div>
+          </div>
+        </li>
+          
+        <li class="item">
+          <div class="row"> 
+            <div class="col col-40">         
+              <button ng-click="sendMessage('CIAN')" class="button button-small button-calm">
+                -Cian-
+              </button>
+            </div>
+            <div class="col col-40">         
+              <button ng-click="sendMessage('VIOLETA')" class="button button-small button-royal">
+                -Violeta
+              </button>
+            </div>
+            <div class="col col-40">         
+              <button ng-click="sendMessage('AMARILLO')" class="button button-small button-energized">
+                Verde
+              </button>
+            </div>
+          </div>
+        </li>
+    <br>
+        <li class="item">
+          <div class="row">
+            <div class="col col-33">
+              <button ng-click="sendMessage('LED')" class="button button-small button-dark">
+               Parpadear
+              </button>
+            </div>
+            <div class="col col-33">
+            <button ng-click="sendMessage('RESET')" class="button button-small button-dark">
+               Reset
+              </button>
+            </div>
+            <div class="col col-33">
+            <button ng-click="sendMessage('RAINBOW')" class="button button-small button-dark">
+                Arcoiris
+              </button>
+            </div>
+          </div>
+        
+    
+        <div class="range">
+            <i class="ion-ios-lightbulb-outline">  </i>
+                Velocidad arcoiris:{{rangeValueRain}}
+                <input type="range" name="valorRain" min="0" max="1023" value="0" ng-model="rangeValueRain"; ng-change="sendMessage('t' + rangeValueRain)";>
+        </input>
+            <i class="ion-ios-lightbulb"></i>
+        </div>
+      </li>
+
+          
+      <center>
+          <div>
+          <img src="img/Robot2.png">
+        </div>
+        <div>
+            <input id="messageRobot2" ng-model="messageRobot2" type="text" placeholder="" disabled="true">
+        </div>
+      </center>
+  </ion-content>
+</ion-view>

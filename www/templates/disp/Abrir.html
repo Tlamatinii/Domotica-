@@ -1,0 +1,30 @@
+<ion-view>
+        <ion-nav-title>
+            
+          <center>
+              <div><button class="button icon ion-ios-home-outline" on-tap="go('/principal')"></button></div>
+              </center>
+         </ion-nav-title>
+      <ion-content padding="true">
+
+         
+            <div class="item range range-calm">
+                    <span style="color:#11c1f3" class="ion-ios-cog-outline"></span>&nbsp;<span style="color:#000000">Ventana habitacion </span>
+                    <input type="range" name="VRHabitacion" min="0" max="100" value="0" ng-model="rangeValueH1"; ng-change="sendMessage('h' + rangeValueH1)";>
+                    <span style="color:#ffffff" class="ion-ios-cog-outline">
+                  </div>
+            <br>
+            <br>
+                  <div class="item range range-dark">
+                        <span style="color:#11c1f3" class="ion-ios-cog-outline"></span>&nbsp;<span style="color:#000000">Ventana cocina</span> 
+                    <input type="range" name="VRCocina" min="0" max="100" value="0"  ng-model="rangeValueH2"; ng-change="sendMessage('c' + rangeValueH2)";>
+                    <span style="color:#ffffff" class="ion-ios-cog-outline"></span>
+                  </div>
+            <br>
+            <br>
+            
+
+
+            
+        </ion-content>
+    </ion-view>
